@@ -412,7 +412,7 @@ const Dashboard = () => {
 
   // Ingredient handlers
 const handleDeleteIngredient = async (id) => {
-  if (!confirm("¿Estás seguro de eliminar este ingrediente?")) return;
+  if (window.confirm("¿Estás seguro de eliminar este ingrediente?")) return;
   
   try {
     const res = await fetch(`http://localhost:5000/api/ingredientes/${id}`, {
